@@ -10,4 +10,8 @@ def hello_world():
 
 @app.route('/<user>')
 def user(user):
+    return render_template("displaydata.html", data=request)
+
+@app.route('/endpoint', methods = ['POST'])
+def endpoint()
     return render_template("displaydata.html", data=user)
