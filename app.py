@@ -13,5 +13,5 @@ def user(user):
     return render_template("displaydata.html", data=request)
 
 @app.route('/endpoint', methods = ['POST'])
-def endpoint()
+def endpoint_post():
     return render_template("displaydata.html", data=user)
