@@ -22,3 +22,8 @@ def endpoint_post():
     f.write(data_rec + ' -- ')
     f.close()
     return render_template("displaydata.html", data="success")
+
+@app.route('/wipe')
+def wipe_file():
+    f = open('datafile', 'w').close()
+    return render_template("displaydata.html", data="success")
